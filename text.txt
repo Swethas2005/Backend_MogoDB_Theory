@@ -1,0 +1,55 @@
+1. What is a NoSQL Database, and explain the types of NoSQL database?
+   ANS: NoSQL databases are non-relational databases designed for large-scale data storage and for massively-parallel, high-performance querying across a distributed system. The types of NoSQL databases include:
+   - Document Databases: Store data as documents (e.g., MongoDB).
+   - Key-Value Stores: Store data as key-value pairs (e.g., Redis).
+   - Column-Family Stores: Store data in columns instead of rows (e.g., Apache Cassandra).
+   - Graph Databases: Store data in nodes, edges, and properties (e.g., Neo4j).
+
+2. What is the difference between SQL and NoSQL databases?
+   ANS: 
+   - SQL Databases: Structured, use tables with fixed schemas, support ACID transactions, and are vertically scalable (e.g., MySQL, PostgreSQL).
+   - NoSQL Databases: Flexible schemas, use various data models (document, key-value, column-family, graph), support eventual consistency, and are horizontally scalable (e.g., MongoDB, Cassandra).
+
+3. How to choose between MongoDB and MySQL based on your requirements?
+   ANS: 
+   - Choose MongoDB if you need flexible schemas, horizontal scalability, fast read/write operations, and if your application involves unstructured or semi-structured data.
+   - Choose MySQL if you need structured data, complex queries, transactional support (ACID), and if your application requires strong consistency and integrity.
+
+4. What are collections and documents in a MongoDB database?
+   ANS: 
+   - Collections: Groups of documents in MongoDB, equivalent to tables in SQL databases.
+   - Documents: Individual records in a MongoDB collection, stored in a BSON format, equivalent to rows in SQL databases.
+
+5. What is BSON? What is the difference between BSON and JSON?
+   ANS: 
+   - BSON: Binary JSON, a binary-encoded serialization of JSON-like documents. 
+   - Difference: BSON supports more data types, is more efficient for encoding and decoding, and includes metadata that JSON lacks.
+
+6. What are MongoDB Compass and MongoDB Shell used for?
+   ANS: 
+   - MongoDB Compass: A graphical user interface (GUI) for interacting with MongoDB, used for data visualization, querying, and database management.
+   - MongoDB Shell: A command-line interface (CLI) for MongoDB, used for running administrative operations, scripting, and executing queries.
+
+7. How to create collections in MongoDB?
+   ANS: Collections can be created explicitly using the `db.createCollection("collectionName")` command, or implicitly by inserting a document into a non-existing collection using the `db.collectionName.insertOne({})` command.
+
+8. What is the difference between insertMany and insertOne?
+   ANS: 
+   - insertOne: Inserts a single document into a collection.
+   - insertMany: Inserts multiple documents into a collection in a single operation.
+
+9. What is the difference between deleteOne and deleteMany?
+   ANS: 
+   - deleteOne: Deletes a single document that matches the filter criteria.
+   - deleteMany: Deletes all documents that match the filter criteria.
+
+10. How to read data in MongoDB? What is the difference between find and findOne?
+    ANS: 
+    - find: Returns all documents that match the query criteria as a cursor.
+    - findOne: Returns the first document that matches the query criteria.
+
+11. What is $set in MongoDB?
+    ANS: $set is an update operator used to update the value of a field in a document. If the field does not exist, it creates it.
+
+12. How to filter data using MongoDB?
+    ANS: Data can be filtered using the find method with a query object, specifying the criteria for the documents to be retrieved. For example, `db.collection.find({ field: value })`.
